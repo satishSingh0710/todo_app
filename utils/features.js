@@ -8,5 +8,5 @@ export const setCookies = (finalUser, res, statusCode = 200, message) => {
     maxAge: 60*60*1000, 
     sameSite: process.env.NODE_ENV=="development"?"lax":"none", 
     secure: process.env.NODE_ENV=="development"?false:true, 
-  }).json({succes: true, message: message});
+  }).json({succes: true, message: message, token: token});
 }
